@@ -1,0 +1,198 @@
+.order-layout {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.order-preview {
+  width: 220px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.order-preview .product-img {
+  width: 100%;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pink-light);
+  border: 1px solid var(--border);
+  margin-bottom: .8rem;
+  padding: 10px; /* Jarak agar gambar gak mepet boks */
+}
+
+.order-preview .product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ini kuncinya biar kacamata utuh gak terpotong */
+}
+
+.order-preview h4 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: .3rem;
+}
+
+.order-preview .price {
+  color: var(--pink-dark);
+  font-weight: 600;
+}
+
+.order-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.order-form h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: .4rem;
+  font-size: .85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: .8rem 1rem;
+  border: 1px solid var(--border);
+  background: white;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  outline: none;
+  transition: .3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--pink-dark);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #e05555;
+}
+
+.error-msg {
+  display: none;
+  margin-top: .3rem;
+  color: #e05555;
+  font-size: .8rem;
+}
+
+.error-msg.show {
+  display: block;
+}
+
+.payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  cursor: pointer;
+  font-size: .95rem;
+}
+
+.payment-option input {
+  width: auto;
+  accent-color: var(--pink-dark);
+}
+
+.addon-group {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.addon-item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .95rem;
+}
+
+.addon-item input {
+  width: auto;
+  accent-color: var(--pink-dark);
+}
+
+.form-submit {
+  margin-top: 15rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+.modal-box {
+  width: 90%;
+  max-width: 420px;
+  background: white;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.modal-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--pink-dark);
+  margin-bottom: 1rem;
+}
+
+.modal-box p {
+  color: var(--text-mid);
+  margin-bottom: 1.5rem;
+}
+
+@media(max-width: 768px) {
+  .order-layout {
+    flex-direction: column;
+  }
+  .order-preview {
+    width: 100%;
+  }
+  .order-form h1 {
+    font-size: 2.2rem;
+  }
+}
